@@ -1,0 +1,39 @@
+# Node deps (applies to front/ and backend/)
+node_modules/
+
+# Env files
+.env
+.env.*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor / IDE
+.vscode/
+.idea/
+
+# Build / output
+dist/
+build/
+coverage/
+
+# Frontend caches and build (optional specific catches)
+front/.cache/
+front/.parcel-cache/
+front/build/
+front/dist/
+
+# Backend build (if you compile/transpile)
+backend/dist/
+backend/build/
+
+# Misc
+*.tgz
+*.zip
