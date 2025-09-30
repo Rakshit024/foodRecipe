@@ -3,7 +3,7 @@ import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home";
 import MainNavigation from "./components/MainNavigation";
-import axios, { all } from "axios";
+import axios from "axios";
 
 const getAllRecipes = async () => {
   let allRecipes = [];

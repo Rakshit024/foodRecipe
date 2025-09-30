@@ -1,11 +1,11 @@
-const Recipe = require("../models/recipeModel");
+const RecipeModel = require("../models/recipeModel");
 const getRecipes = async (req, res) => {
-  const recipes = await Recipe.find();
+  const recipes = await RecipeModel.find();
   return res.status(200).json(recipes);
 };
 
 const getRecipe = async (req, res) => {
-  const recipes = await Recipe.findById(req.params.id);
+  const recipes = await RecipeModel.findById(req.params.id);
   return res.status(200).json(recipes);
 };
 
@@ -17,7 +17,7 @@ const addRecipe = async (req, res) => {
       .status(400)
       .json({ message: "Please provide all required fields." });
   }
-  const newRecipe = await Recipe.create({
+  const newRecipe = await RecipeModel.create({
     title,
     ingredients,
     instructions,
@@ -29,10 +29,12 @@ const addRecipe = async (req, res) => {
 const updateRecipe = async (req, res) => {
   const { title, ingredients, instructions, time } = req.body;
 
-  let recipe = await Recipe.findById(req.params.id);
+  let recipe = await RecipeModel.findById(req.params.id);
   try {
     if (recipe) {
-      await Recipe.findByIdAndUpdate(req.params.id, req.body, { new: true });
+      await RecipeModel.findByIdAndUpdate(req.params.id, req.body, {
+        new: true,
+      });
       return res.status(200).json({ title, ingredients, instructions, time });
     }
   } catch (err) {

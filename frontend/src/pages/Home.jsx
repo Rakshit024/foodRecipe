@@ -8,7 +8,7 @@ export default function Home() {
       {" "}
       <section className="home">
         <div className="left">
-          <h1>Food Rrecipe</h1>
+          <h1>Food Recipe</h1>
           <h5>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
             Reprehenderit tenetur, totam quasi harum eveniet nesciunt unde ex

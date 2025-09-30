@@ -1,10 +1,9 @@
-import React from 'react'
+import React from "react";
 
-export default function 
-() {
+export default function () {
   return (
-    <div className='footer'>
-        <p>@copyright &copy; Rakshit Patel</p>
+    <div className="footer">
+      <p>@copyright &copy; Rakshit Patel</p>
     </div>
-  )
+  );
 }
